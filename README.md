@@ -4,7 +4,7 @@ An example of an AngularJs-Application turning into a (real) X-Platform-Applicat
 
 Special Thanks to the Boardz!-Example from Thinktecture <a href="https://github.com/thinktecture/boardz-cross-platform-sample">Sample application for various “Cross-Platform HTML5 – in Action!” workshops</a> 
 
-You can clone this repo and run <pre>npm install</pre>
+You can clone this repo and run <pre>npm install</pre> <pre>bower install</pre>
 
 After this you can run <pre>gulp prod:build:all</pre> to build all in a ".dist" folder.
 
