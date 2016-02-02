@@ -1,4 +1,4 @@
-# AngularJs-XPlatform-Example
+# AngularJs and ASp.NET WebAPI XPlatform-Example
 
 An example of an AngularJs-Application turning into a (real) X-Platform-Application using Grunt as Taskrunner, bower, npm, ASP.NET WEBAPI and gulp.
 
