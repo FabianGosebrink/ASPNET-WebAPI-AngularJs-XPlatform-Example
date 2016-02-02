@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.min.css">
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/src/loading-bar.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/metisMenu.min.css">
+    <link rel="stylesheet" href="css/startmin.css">
+    <!-- endinject -->
+
+    <title>XPlatformExample</title>
+
+    <!-- Bootstrap core CSS -->
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+        }
+
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <!--<link href="starter-template.css" rel="stylesheet">-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-ng-app="XPlatformExample">
+
+    <div data-ng-view></div>
+
+    <script src="cordova.js"></script>
+    <!-- inject:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/metisMenu.min.js"></script>
+    <script src="js/raphael.min.js"></script>
+    <script src="js/startmin.js"></script>
+    <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/signalr/jquery.signalR.min.js"></script>
+    <script src="app/application.js"></script>
+    <script src="app/Account/account.module.js"></script>
+    <script src="app/Camera/camera.module.js"></script>
+    <script src="app/Chat/chat.module.js"></script>
+    <script src="app/Common/common.module.js"></script>
+    <script src="app/Contact/contact.module.js"></script>
+    <script src="app/Home/home.module.js"></script>
+    <script src="app/Account/account.routes.js"></script>
+    <script src="app/Camera/camera.routes.js"></script>
+    <script src="app/Chat/chat.routes.js"></script>
+    <script src="app/Contact/contact.routes.js"></script>
+    <script src="app/Home/home.routes.js"></script>
+    <script src="app/Account/Controller/accountController.js"></script>
+    <script src="app/Account/Services/accountDataservice.js"></script>
+    <script src="app/Camera/Controller/cameraController.js"></script>
+    <script src="app/Camera/Services/cameraProvider.js"></script>
+    <script src="app/Camera/Services/desktopCamera.js"></script>
+    <script src="app/Camera/Services/mobileCamera.js"></script>
+    <script src="app/Chat/Controller/chatController.js"></script>
+    <script src="app/Common/Interceptors/authInterceptor.js"></script>
+    <script src="app/Common/Navigation/navigationController.js"></script>
+    <script src="app/Common/Services/notificationService.js"></script>
+    <script src="app/Common/Services/platformInformation.js"></script>
+    <script src="app/Common/Services/signalRService.js"></script>
+    <script src="app/Common/Services/storageService.js"></script>
+    <script src="app/Common/Services/userService.js"></script>
+    <script src="app/Contact/Controllers/contactController.js"></script>
+    <script src="app/Home/Controllers/homeController.js"></script>
+    <script src="app/Home/Services/peopleService.js"></script>
+    <!-- endinject -->
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+﻿
+<div id="wrapper">
+    <!-- Navigation -->
+    <div ng-include="'app/Common/Navigation/navigation.html'"></div>
+    <!-- Page Content -->
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Chat</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                <!-- /.panel -->
+                <div class="chat-panel panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-comments fa-fw"></i>
+                        Chat
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <ul class="chat">
+
+                            <li class="left clearfix"
+                                data-ng-repeat="message in vm.chatMessages track by $index"
+                                data-ng-class="vm.username === message.Username ? 'left clearfix' : 'right clearfix'">
+
+                                <span data-ng-class="vm.username === message.Username? 'chat-img pull-left' : 'chat-img pull-right'">
+                                    <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar"
+                                         class="img-circle" />
+                                </span>
+
+                                <div class="chat-body clearfix" data-ng-if="vm.username !== message.Username">
+                                    <div class="header">
+                                        <small class="text-muted">
+                                            <i class="fa fa-clock-o fa-fw"></i> {{message.SentAt | date:'MMM d, y hh:mm:ss'}}
+                                        </small>
+                                        <strong class="pull-right primary-font">{{message.Username}}</strong>
+                                    </div>
+                                    <p>
+                                        {{message.Text}}
+                                    </p>
+                                </div>
+
+                                <div class="chat-body clearfix" data-ng-if="vm.username === message.Username">
+                                    <div class="header">
+                                        <strong class="primary-font">{{message.Username}}</strong>
+                                        <small class="pull-right text-muted">
+                                            <i class="fa fa-clock-o fa-fw"></i> {{message.SentAt | date:'MMM d, y hh:mm:ss'}}
+                                        </small>
+                                    </div>
+                                    <p>
+                                        {{message.Text}}
+                                    </p>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <!-- /.panel-body -->
+                    <div class="panel-footer">
+                        <form data-ng-submit="vm.sendChat()">
+                            <div class="form-group">
+                                <div class="input-group col-sm-12">
+                                    <input id="btn-input" type="text" class="form-control input-sm"
+                                           placeholder="Type your message here..." data-ng-model="vm.messageText" />
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-warning btn-sm" id="btn-chat">
+                                            Send
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.panel-footer -->
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->

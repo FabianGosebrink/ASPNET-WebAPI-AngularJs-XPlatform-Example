@@ -1,0 +1,6 @@
+XPlatformExample/.dist/**/*.*
+XPlatformExample/.temp/**/*.*
+XPlatformExample/bower_components/**/*.*
+XPlatformExample/node_modules/**/*.*
+XPlatformExample/bower_components/**/*
+XPlatformExample/node_modules/**/*

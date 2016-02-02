@@ -1,0 +1,189 @@
+﻿<div id="wrapper">
+    <div ng-include="'app/Common/Navigation/navigation.html'"></div>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Dashboard</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>
+                    <label>Prozessor</label>
+                </p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{vm.cpuUsage}}" aria-valuemin="0" aria-valuemax="100"
+                         ng-style="{width : ( vm.cpuUsage + '%' ) }">
+                        {{vm.cpuUsage}}%
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-green">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-tasks fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">{{vm.cpuUsage}}</div>
+                                <div>Percent usage</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-yellow">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-user fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">{{vm.peopleService.allPeople.length}}</div>
+                                <div>Registered Users!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-red">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-exclamation-triangle fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">{{vm.allErrors}}</div>
+                                <div>Errors</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- /.panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-users fa-fw"></i> Registered Users
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form class="form-inline" data-ng-submit="vm.addPerson()" name="newPersonForm">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="name">Name</label>
+                                        <input type="text" class="form-control"
+                                               id="name" name="name" placeholder="Enter name"
+                                               data-ng-model="vm.newPerson.Name" data-ng-minlength="2" required>
+                                        <span class="error" data-ng-show="newPersonForm.name.$error.required">*</span>
+                                        <span class="error" data-ng-show="newPersonForm.name.$error.minlength"><br />Minimum 2 Characters</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" id="age" name="age" placeholder="35" data-ng-model="vm.newPerson.Age" required>
+                                        <span class="error" data-ng-show="newPersonForm.age.$error.required">*</span>
+                                        <span class="error" data-ng-show="newPersonForm.age.$error.number">Not a valid number</span>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary" data-ng-disabled="newPersonForm.$invalid">Add User</button>
+                                </form>
+                                <br />
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                                <th>Age</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-ng-repeat="person in vm.peopleService.allPeople">
+                                                <td>{{person.Id}}</td>
+                                                <td>{{person.Name}}</td>
+                                                <td>{{person.Age}}</td>
+                                                <td class="text-right">
+                                                    <button data-ng-click="vm.deletePerson(person)" class="btn btn-primary btn-xs">Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+            <!-- /.col-lg-8 -->
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bell fa-fw"></i> Notifications Panel
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <!--D9534F-->
+                            <a ng-click="" ng-repeat="notification in vm.notificationService.allNotifications"
+                               ng-class="{'list-group-item list-group-item-success': notification.isSuccess, 'list-group-item list-group-item-danger': !notification.isSuccess}">
+                                <div class="success">
+                                    {{notification.message}}
+                                    <br />
+                                    
+                                    <span class="text-muted small">
+                                        <em>{{notification.time | date:'dd.MM.yyyy HH:mm:ss'}}</em>
+                                    </span>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+
+
+                <!-- /.panel .chat-panel -->
+            </div>
+            <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+

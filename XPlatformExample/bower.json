@@ -1,0 +1,20 @@
+{
+  "name": "XPlatformExample",
+  "version": "0.0.1",
+  "authors": [
+    "Fabian Gosebrink"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-animate": "~1.4.4",
+    "angular-bootstrap": "~0.13.3",
+    "angular-loading-bar": "~0.8.0",
+    "angular-route": "~1.4.4",
+    "angular-toastr": "~1.4.1",
+    "lodash": "~3.10.1",
+    "signalr": "~2.2.0",
+    "ngCordova": "~0.1.23-alpha"
+  }
+}
