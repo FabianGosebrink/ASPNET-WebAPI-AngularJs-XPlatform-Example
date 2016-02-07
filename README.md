@@ -6,7 +6,7 @@ An example of an AngularJs-Application turning into a (real) X-Platform-Applicat
 ##### From here  <a href="https://github.com/Semantic-Org/Semantic-UI/issues/3554"> Gulp build fail #3554 </a> 
 
 
-### Special Thanks to the Boardz!-Example from Thinktecture <a href="https://github.com/thinktecture/boardz-cross-platform-sample">Sample application for various “Cross-Platform HTML5 – in Action!” workshops</a> 
+### Special thanks for the inspiration to the Thinktecture guys especially to the Boardz!-Example <a href="https://github.com/thinktecture/boardz-cross-platform-sample">Sample application for various “Cross-Platform HTML5 – in Action!” workshops</a> 
 
 You can clone this repo and run <pre>npm install</pre> <pre>bower install</pre>
 
