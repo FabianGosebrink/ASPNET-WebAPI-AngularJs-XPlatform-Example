@@ -50,8 +50,7 @@
         .constant('_', window._)
         .constant('appSettings',
         {
-            //serverPath: 'http://localhost:63047/'
-            serverPath: 'https://xplatformexample.azurewebsites.net/'
+            serverPath: 'http://localhost:63047/'
         });
 
 }());
