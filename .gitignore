@@ -4,3 +4,4 @@ XPlatformExample/bower_components/**/*.*
 XPlatformExample/node_modules/**/*.*
 XPlatformExample/bower_components/**/*
 XPlatformExample/node_modules/**/*
+XPlatformExample/Properties/PublishProfiles/*
